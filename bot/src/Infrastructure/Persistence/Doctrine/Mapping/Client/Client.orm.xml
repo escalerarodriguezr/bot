@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="Bot\Domain\Client\Model\Client" table="clients">
+        <id name="id" type="guid"/>
+        <field name="email" length="100" />
+        <field name="name" length="50" />
+        <field name="password" length="100" />
+
+        <field name="createdAt" type="datetime_immutable"/>
+        <field name="updatedAt" type="datetime_immutable"/>
+
+        <one-to-many field="users" target-entity="Bot\Domain\User\Model\User" mapped-by="client">
+            <cascade>
+                <cascade-remove/>
+            </cascade>
+        </one-to-many>
+
+
+        <unique-constraints>
+            <unique-constraint name="U_client_email" columns="email"/>
+        </unique-constraints>
+
+
+        <lifecycle-callbacks>
+            <lifecycle-callback type="preUpdate" method="markAsUpdated"/>
+        </lifecycle-callbacks>
+
+    </entity>
+</doctrine-mapping>

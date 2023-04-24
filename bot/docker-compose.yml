@@ -1,0 +1,60 @@
+version: '3.5'
+
+services:
+  bot-web:
+    container_name: bot-web
+    build:
+      context: ./etc/nginx
+      args:
+        UID: $U_ID
+    ports:
+      - 250:80
+    volumes:
+      - ./public:/appdata/www/public
+    depends_on:
+      - bot-be
+    networks:
+      - bot-network
+
+  bot-be:
+    container_name: bot-be
+    build:
+      context: etc/php
+      args:
+        UID: $U_ID
+    environment:
+      XDEBUG_CLIENT_HOST: 172.17.0.1
+      XDEBUG_CLIENT_PORT: 9003
+      PHP_IDE_CONFIG: serverName=bot
+
+    volumes:
+      - ./:/appdata/www
+      - ~/.ssh/id_rsa:/home/appuser/.ssh/id_rsa
+    depends_on:
+      - bot-db
+    networks:
+      - bot-network
+
+  bot-db:
+    container_name: bot-db
+    build:
+      context: ./etc/database
+    ports:
+      - 36000:3306
+    environment:
+      MYSQL_DATABASE: bot_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: root
+    command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
+    volumes:
+      - bot-db-data:/var/lib/mysql
+    networks:
+      - bot-network
+
+volumes:
+  bot-db-data:
+
+networks:
+  bot-network:
+    external: true

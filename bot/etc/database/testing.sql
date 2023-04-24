@@ -1,0 +1,2 @@
+CREATE DATABASE IF NOT EXISTS bot_db_test;
+GRANT ALL PRIVILEGES ON bot_db_test.* TO 'root' IDENTIFIED BY 'root';

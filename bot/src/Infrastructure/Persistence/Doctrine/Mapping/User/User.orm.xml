@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="Bot\Domain\User\Model\User" table="users">
+        <id name="id" type="guid"/>
+        <field name="name" length="50" />
+        <field name="lastName" length="50" />
+        <field name="location" length="100" />
+        <field name="category" length="50" />
+        <field name="age" type="integer"/>
+        <field name="active" type="boolean">
+            <options>
+                <option name="default">true</option>
+            </options>
+        </field>
+
+        <field name="createdAt" type="datetime_immutable"/>
+        <field name="updatedAt" type="datetime_immutable"/>
+
+        <many-to-one field="client" target-entity="Bot\Domain\Client\Model\Client" inversed-by="users" >
+            <join-column name="client_id" referenced-column-name="id" nullable="false"/>
+        </many-to-one>
+
+
+        <lifecycle-callbacks>
+            <lifecycle-callback type="preUpdate" method="markAsUpdated"/>
+        </lifecycle-callbacks>
+
+    </entity>
+</doctrine-mapping>

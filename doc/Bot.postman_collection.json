@@ -1,0 +1,422 @@
+{
+	"info": {
+		"_postman_id": "447e59ba-c819-4f1b-a70e-dedf22f72fa5",
+		"name": "Bot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7101871"
+	},
+	"item": [
+		{
+			"name": "CreateUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2ODIxMDg5NzksImV4cCI6MTY4MjExMjU3OSwidXNlcm5hbWUiOiJjbGllbnRCQGJvdC5jb20iLCJjbGllbnRJZCI6IjkwZDcyOWQxLTFlOGUtNDExZC1iM2QwLTRmNWU4ZGExYzg4NiIsImNsaWVudEVtYWlsIjoiY2xpZW50QkBib3QuY29tIn0.Wj8kwUrJeEciwGEQPL_GOF8HHhnxegMvQS4_AGTfjB5mig5X838-HYMuEzLdqYFekWhU_aUBeqQEmkvPX539bor-0Ae2safSVuA9fDL9RzgYIuCDBCupGuYeo31RbzO-lk5L0pssUQUQAeiL5Pgpj3akbrkqpvCaN2-KaF76g2keIsR9hve3FgLsu-wzK_RdVWHlA86Uqyr8H-JOg44cQ8OAw0wjExJZ1d4Na5dNyn9XnLzjRyNCsuDO6WctMngD3S2NWXIebMv4ZOKzyVd_Hn_yLKnBOBX3zoy3yuPQPirz5RhrqbA4ykJdSHKvsJCXI4ok62YoGUk3QbVNMmcGRQhRFV4Xd4XdqA30715DcHsy_-oYV5EgFFazQk7FzuugYAG-_Wo0wf0tpCteyDieBgXYZAykhupUA-YPIVFmhF3OKbldv8v3aTanU6StL4L0MJ-9n3VcsqklUkFSvQubUeBCqW3RlY-H5vUWAaTzlITBQeu-OYfeYn_RTZBNMpJQx3ghua6UhmEV6-xt5NkNVX_N-ndyitDFVAkBf9NVCzFnFlrcrOV1qoTFukPItkC-DnIylxaxhQw9wX9gIlHa8QQZxChDLf4XiJ_uRsw-SGO0fDTD_fnADRUsO92aPjuaA2UvO6DkcgJ0hayeaNEgDrsJZ1A_rhzsgFZp_Y22Ip4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Claudia...\",\n    \"lastName\": \"de la Escalera\",\n    \"location\": \"Madrid\",\n    \"category\": \"X\",\n    \"age\": 43,\n    \"active\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:250/api/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "250",
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2ODIxMDg5NzksImV4cCI6MTY4MjExMjU3OSwidXNlcm5hbWUiOiJjbGllbnRCQGJvdC5jb20iLCJjbGllbnRJZCI6IjkwZDcyOWQxLTFlOGUtNDExZC1iM2QwLTRmNWU4ZGExYzg4NiIsImNsaWVudEVtYWlsIjoiY2xpZW50QkBib3QuY29tIn0.Wj8kwUrJeEciwGEQPL_GOF8HHhnxegMvQS4_AGTfjB5mig5X838-HYMuEzLdqYFekWhU_aUBeqQEmkvPX539bor-0Ae2safSVuA9fDL9RzgYIuCDBCupGuYeo31RbzO-lk5L0pssUQUQAeiL5Pgpj3akbrkqpvCaN2-KaF76g2keIsR9hve3FgLsu-wzK_RdVWHlA86Uqyr8H-JOg44cQ8OAw0wjExJZ1d4Na5dNyn9XnLzjRyNCsuDO6WctMngD3S2NWXIebMv4ZOKzyVd_Hn_yLKnBOBX3zoy3yuPQPirz5RhrqbA4ykJdSHKvsJCXI4ok62YoGUk3QbVNMmcGRQhRFV4Xd4XdqA30715DcHsy_-oYV5EgFFazQk7FzuugYAG-_Wo0wf0tpCteyDieBgXYZAykhupUA-YPIVFmhF3OKbldv8v3aTanU6StL4L0MJ-9n3VcsqklUkFSvQubUeBCqW3RlY-H5vUWAaTzlITBQeu-OYfeYn_RTZBNMpJQx3ghua6UhmEV6-xt5NkNVX_N-ndyitDFVAkBf9NVCzFnFlrcrOV1qoTFukPItkC-DnIylxaxhQw9wX9gIlHa8QQZxChDLf4XiJ_uRsw-SGO0fDTD_fnADRUsO92aPjuaA2UvO6DkcgJ0hayeaNEgDrsJZ1A_rhzsgFZp_Y22Ip4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Claudia Maríaaaaa\",\n    \"lastName\": \"de la Escalera\",\n    \"location\": \"Madrid\",\n    \"category\": \"X\",\n    \"age\": 43,\n    \"active\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:250/api/v1/user/f9220922-2a35-4c69-b480-6d2a43aa0e71",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "250",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"f9220922-2a35-4c69-b480-6d2a43aa0e71"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2ODIwNzcyOTksImV4cCI6MTY4MjA4MDg5OSwidXNlcm5hbWUiOiJjbGllbnRCQGJvdC5jb20iLCJjbGllbnRJZCI6IjkwZDcyOWQxLTFlOGUtNDExZC1iM2QwLTRmNWU4ZGExYzg4NiIsImNsaWVudEVtYWlsIjoiY2xpZW50QkBib3QuY29tIn0.zyPD32KaTfuOedKu5pdrggoocueOzKYPzXNKu5JnaWxvIfBNj1URY3BSlDItkG-w6BUYY-IZMgim4nV8uC_L4jZ9iBALaZO-RBbdwL9VyJdLNE2XM1Ej63BVwpSp9O2njnc2Zj6pb7AXd9m9LHhUOPV6VNWlPjHydykN3Sn0jOOK9gmLkk18sOW_zxdTVN_KQf8j96cSRtWBXv3RYoyaI-hFgJyRXJF06EsHe6TfG_4UYZgoa3V8InZF5Qq57CvEHhy4C7IDOu1FD3szCa5yWcWRew2DRhyFScPsPX1lyAQJRU5cbdE6kSPz_g6rbvpaYQVD8thYmPvkymIlenNIvkPVgMbPtpBbKjrWPRct5E2irTyi96ZmlEzdY7kSDJROKjiDrOUn22E9G6NIoT6OzftVs0ZWiBJXZVIeTIK3IoRRm_mWHY87Z7W7eM05G9peYi27cb83OUTod1gcUfyR7Ka2Q6uhdIoOCdCtHp-DBDU6wj9i_6B9u_ibxRpbZwJG9-lR_gSMgH4M_ahTA3TzHEk8y-Pz2Uf-c4yBmi1i7laY_Nxc16dE1z8gTp1lNaM9z9RuIHSKQbksm5oHPR2I_04eZumVpgILR6LJMtF5cwTOw49dE7NrDrrW1aQQffr8RiFXug6gOH59944gv0yv6PFsdOOMG5BN72gmEWMaWMg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Alejandro...\",\n    \"lastName\": \"de la Escalera\",\n    \"location\": \"Madrid\",\n    \"category\": \"X\",\n    \"age\": 43,\n    \"active\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:250/api/v1/user/b4f691c2-f70e-45d5-85ba-34ae363c6bfd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "250",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"b4f691c2-f70e-45d5-85ba-34ae363c6bfd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchUsercreatedAtConditionGreaterThan&nameConditionEqualTo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2ODIxMDkzNDAsImV4cCI6MTY4MjExMjk0MCwidXNlcm5hbWUiOiJjbGllbnRCQGJvdC5jb20iLCJjbGllbnRJZCI6IjkwZDcyOWQxLTFlOGUtNDExZC1iM2QwLTRmNWU4ZGExYzg4NiIsImNsaWVudEVtYWlsIjoiY2xpZW50QkBib3QuY29tIn0.VyC2U-U7qCmr03FSXz3gPhAw0Y6g9_rtPZceQKaZ6bxKHEpCdhYy8hlNboOuxrm8jMoyD2yvKTaFdz7vWoj7fqqSvQ7ZQIv6iZR5jwniGB4xy3bjVE-a-eZL2yBRLt1F3AXF8jSlbrIvz9X3Ubv_gdK-V2CvPkle4b-HxrtZgR4NKusyWyms0uqM3U303s2RBzSuyqabPvvbgBt3fHXo2OMXPp1-dmo0jWFIaUOsknIp8sAUUdKM-U4wRv4WORsH71v6gsqBcEKc2pw1wtbGoJzuFHQsn78Jd83zZUgjQm8sYVOU3qUUT5L5bs2cpr4DWihq1crbfU4i86JloyGmIE3kEjKcTO4GRpi9rwCxZBkOmvEd3sBO0XVW1tLRJrDVZOeBlqE-yS5DA5sZqm2x5-43CyUk4h-gYjQvQIsCUnE_l4xKq3bJRqbLEto9tV-R24VCtL95Am6XaCucYOMx6QxAUO0AiEsc52mGivMNVMK8U8gTtOqxDTWVbazygzdeYaqtpAG9rqNOa28TkhdtxZteXgCoYOhVzTNB9XITt7avCBq3hqfW7z67n2pHvTuf-ZPRkVXKgGhtyzEB97A-1kD-GLfwdDKz8erpwYorR-vLLfj76YEjP53x9sZZCVCKouSiqRMLIW8_cX9pIp45JyIvbZltyYEwCaFaEWaGvZI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Alejandro...\",\n    \"lastName\": \"de la Escalera\",\n    \"location\": \"Madrid\",\n    \"category\": \"X\",\n    \"age\": 43,\n    \"active\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:250/api/v1/users?createdAtConditionGreaterThan=2023-04-21 11:43:03&nameConditionEqualTo=alejandro...",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "250",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					],
+					"query": [
+						{
+							"key": "createdAtConditionGreaterThan",
+							"value": "2023-04-21 11:43:03"
+						},
+						{
+							"key": "nameConditionEqualTo",
+							"value": "alejandro..."
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchUsercreatedAtConditionGreaterThan",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2ODIxMDkzNDAsImV4cCI6MTY4MjExMjk0MCwidXNlcm5hbWUiOiJjbGllbnRCQGJvdC5jb20iLCJjbGllbnRJZCI6IjkwZDcyOWQxLTFlOGUtNDExZC1iM2QwLTRmNWU4ZGExYzg4NiIsImNsaWVudEVtYWlsIjoiY2xpZW50QkBib3QuY29tIn0.VyC2U-U7qCmr03FSXz3gPhAw0Y6g9_rtPZceQKaZ6bxKHEpCdhYy8hlNboOuxrm8jMoyD2yvKTaFdz7vWoj7fqqSvQ7ZQIv6iZR5jwniGB4xy3bjVE-a-eZL2yBRLt1F3AXF8jSlbrIvz9X3Ubv_gdK-V2CvPkle4b-HxrtZgR4NKusyWyms0uqM3U303s2RBzSuyqabPvvbgBt3fHXo2OMXPp1-dmo0jWFIaUOsknIp8sAUUdKM-U4wRv4WORsH71v6gsqBcEKc2pw1wtbGoJzuFHQsn78Jd83zZUgjQm8sYVOU3qUUT5L5bs2cpr4DWihq1crbfU4i86JloyGmIE3kEjKcTO4GRpi9rwCxZBkOmvEd3sBO0XVW1tLRJrDVZOeBlqE-yS5DA5sZqm2x5-43CyUk4h-gYjQvQIsCUnE_l4xKq3bJRqbLEto9tV-R24VCtL95Am6XaCucYOMx6QxAUO0AiEsc52mGivMNVMK8U8gTtOqxDTWVbazygzdeYaqtpAG9rqNOa28TkhdtxZteXgCoYOhVzTNB9XITt7avCBq3hqfW7z67n2pHvTuf-ZPRkVXKgGhtyzEB97A-1kD-GLfwdDKz8erpwYorR-vLLfj76YEjP53x9sZZCVCKouSiqRMLIW8_cX9pIp45JyIvbZltyYEwCaFaEWaGvZI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Alejandro...\",\n    \"lastName\": \"de la Escalera\",\n    \"location\": \"Madrid\",\n    \"category\": \"X\",\n    \"age\": 43,\n    \"active\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:250/api/v1/users?createdAtConditionGreaterThan=2023-04-21 11:43:03",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "250",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					],
+					"query": [
+						{
+							"key": "createdAtConditionGreaterThan",
+							"value": "2023-04-21 11:43:03"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchUser_nameConditionEqualTo_multiple_values",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2ODIxMDkzNDAsImV4cCI6MTY4MjExMjk0MCwidXNlcm5hbWUiOiJjbGllbnRCQGJvdC5jb20iLCJjbGllbnRJZCI6IjkwZDcyOWQxLTFlOGUtNDExZC1iM2QwLTRmNWU4ZGExYzg4NiIsImNsaWVudEVtYWlsIjoiY2xpZW50QkBib3QuY29tIn0.VyC2U-U7qCmr03FSXz3gPhAw0Y6g9_rtPZceQKaZ6bxKHEpCdhYy8hlNboOuxrm8jMoyD2yvKTaFdz7vWoj7fqqSvQ7ZQIv6iZR5jwniGB4xy3bjVE-a-eZL2yBRLt1F3AXF8jSlbrIvz9X3Ubv_gdK-V2CvPkle4b-HxrtZgR4NKusyWyms0uqM3U303s2RBzSuyqabPvvbgBt3fHXo2OMXPp1-dmo0jWFIaUOsknIp8sAUUdKM-U4wRv4WORsH71v6gsqBcEKc2pw1wtbGoJzuFHQsn78Jd83zZUgjQm8sYVOU3qUUT5L5bs2cpr4DWihq1crbfU4i86JloyGmIE3kEjKcTO4GRpi9rwCxZBkOmvEd3sBO0XVW1tLRJrDVZOeBlqE-yS5DA5sZqm2x5-43CyUk4h-gYjQvQIsCUnE_l4xKq3bJRqbLEto9tV-R24VCtL95Am6XaCucYOMx6QxAUO0AiEsc52mGivMNVMK8U8gTtOqxDTWVbazygzdeYaqtpAG9rqNOa28TkhdtxZteXgCoYOhVzTNB9XITt7avCBq3hqfW7z67n2pHvTuf-ZPRkVXKgGhtyzEB97A-1kD-GLfwdDKz8erpwYorR-vLLfj76YEjP53x9sZZCVCKouSiqRMLIW8_cX9pIp45JyIvbZltyYEwCaFaEWaGvZI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Alejandro...\",\n    \"lastName\": \"de la Escalera\",\n    \"location\": \"Madrid\",\n    \"category\": \"X\",\n    \"age\": 43,\n    \"active\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:250/api/v1/users?nameConditionEqualTo=alejandro...-|-claudia...",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "250",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					],
+					"query": [
+						{
+							"key": "nameConditionEqualTo",
+							"value": "alejandro...-|-claudia..."
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchUser_nameConditionNotEqualTo_multiple_values",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2ODIxMDkzNDAsImV4cCI6MTY4MjExMjk0MCwidXNlcm5hbWUiOiJjbGllbnRCQGJvdC5jb20iLCJjbGllbnRJZCI6IjkwZDcyOWQxLTFlOGUtNDExZC1iM2QwLTRmNWU4ZGExYzg4NiIsImNsaWVudEVtYWlsIjoiY2xpZW50QkBib3QuY29tIn0.VyC2U-U7qCmr03FSXz3gPhAw0Y6g9_rtPZceQKaZ6bxKHEpCdhYy8hlNboOuxrm8jMoyD2yvKTaFdz7vWoj7fqqSvQ7ZQIv6iZR5jwniGB4xy3bjVE-a-eZL2yBRLt1F3AXF8jSlbrIvz9X3Ubv_gdK-V2CvPkle4b-HxrtZgR4NKusyWyms0uqM3U303s2RBzSuyqabPvvbgBt3fHXo2OMXPp1-dmo0jWFIaUOsknIp8sAUUdKM-U4wRv4WORsH71v6gsqBcEKc2pw1wtbGoJzuFHQsn78Jd83zZUgjQm8sYVOU3qUUT5L5bs2cpr4DWihq1crbfU4i86JloyGmIE3kEjKcTO4GRpi9rwCxZBkOmvEd3sBO0XVW1tLRJrDVZOeBlqE-yS5DA5sZqm2x5-43CyUk4h-gYjQvQIsCUnE_l4xKq3bJRqbLEto9tV-R24VCtL95Am6XaCucYOMx6QxAUO0AiEsc52mGivMNVMK8U8gTtOqxDTWVbazygzdeYaqtpAG9rqNOa28TkhdtxZteXgCoYOhVzTNB9XITt7avCBq3hqfW7z67n2pHvTuf-ZPRkVXKgGhtyzEB97A-1kD-GLfwdDKz8erpwYorR-vLLfj76YEjP53x9sZZCVCKouSiqRMLIW8_cX9pIp45JyIvbZltyYEwCaFaEWaGvZI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Alejandro...\",\n    \"lastName\": \"de la Escalera\",\n    \"location\": \"Madrid\",\n    \"category\": \"X\",\n    \"age\": 43,\n    \"active\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:250/api/v1/users?nameConditionNotEqualTo=alejandro...-|-claudia...",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "250",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					],
+					"query": [
+						{
+							"key": "nameConditionNotEqualTo",
+							"value": "alejandro...-|-claudia..."
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchUser_activeConditionNotEqualTo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2ODIxMDkzNDAsImV4cCI6MTY4MjExMjk0MCwidXNlcm5hbWUiOiJjbGllbnRCQGJvdC5jb20iLCJjbGllbnRJZCI6IjkwZDcyOWQxLTFlOGUtNDExZC1iM2QwLTRmNWU4ZGExYzg4NiIsImNsaWVudEVtYWlsIjoiY2xpZW50QkBib3QuY29tIn0.VyC2U-U7qCmr03FSXz3gPhAw0Y6g9_rtPZceQKaZ6bxKHEpCdhYy8hlNboOuxrm8jMoyD2yvKTaFdz7vWoj7fqqSvQ7ZQIv6iZR5jwniGB4xy3bjVE-a-eZL2yBRLt1F3AXF8jSlbrIvz9X3Ubv_gdK-V2CvPkle4b-HxrtZgR4NKusyWyms0uqM3U303s2RBzSuyqabPvvbgBt3fHXo2OMXPp1-dmo0jWFIaUOsknIp8sAUUdKM-U4wRv4WORsH71v6gsqBcEKc2pw1wtbGoJzuFHQsn78Jd83zZUgjQm8sYVOU3qUUT5L5bs2cpr4DWihq1crbfU4i86JloyGmIE3kEjKcTO4GRpi9rwCxZBkOmvEd3sBO0XVW1tLRJrDVZOeBlqE-yS5DA5sZqm2x5-43CyUk4h-gYjQvQIsCUnE_l4xKq3bJRqbLEto9tV-R24VCtL95Am6XaCucYOMx6QxAUO0AiEsc52mGivMNVMK8U8gTtOqxDTWVbazygzdeYaqtpAG9rqNOa28TkhdtxZteXgCoYOhVzTNB9XITt7avCBq3hqfW7z67n2pHvTuf-ZPRkVXKgGhtyzEB97A-1kD-GLfwdDKz8erpwYorR-vLLfj76YEjP53x9sZZCVCKouSiqRMLIW8_cX9pIp45JyIvbZltyYEwCaFaEWaGvZI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Alejandro...\",\n    \"lastName\": \"de la Escalera\",\n    \"location\": \"Madrid\",\n    \"category\": \"X\",\n    \"age\": 43,\n    \"active\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:250/api/v1/users?activeConditionNotEqualTo=false",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "250",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					],
+					"query": [
+						{
+							"key": "activeConditionNotEqualTo",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"client@client.com\",\n    \"password\": \"qwertyuiop\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:250/api/login_check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "250",
+					"path": [
+						"api",
+						"login_check"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
