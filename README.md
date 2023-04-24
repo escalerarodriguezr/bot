@@ -2,9 +2,12 @@
 
 ## Resolución
 
-La prueba se ha resuelto con Symfony 6.1 y se ha implementado un diseño aplicando Arquitectura Hexágonal y DDD.\
-Para la Authentication se ha implementado Json Web Tokens (JWT) (https://github.com/lexik/LexikJWTAuthenticationBundle).\
-En la ruta /doc, se incluye la documentación de la Colección de Postman con endpoints de ejemplo.\
+La prueba se ha resuelto con Symfony 6.1 y se ha implementado un diseño aplicando Arquitectura Hexágonal y DDD.
+
+Para la Authentication se ha implementado Json Web Tokens (JWT) (https://github.com/lexik/LexikJWTAuthenticationBundle).
+
+En la ruta /doc, se incluye la documentación de la Colección de Postman con endpoints de ejemplo.
+
 En la ruta  /bot se incluye de la aplicación.
 
 El comando de instalacíon de los clientes genera los siguientes clientes:
